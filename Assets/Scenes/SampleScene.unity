@@ -532,6 +532,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &634346099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634346101}
+  - component: {fileID: 634346100}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &634346100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634346099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b039ea3fda56d94fb967384af0d75fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  _objectPrefab: {fileID: 2392909014866803393, guid: deda3624394ad3248987bde3bb7f56fb, type: 3}
+  _poolSize: 10
+--- !u!4 &634346101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634346099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.83681, y: 0.70824, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1238709616
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1520d7cf47e2489ccb620e3dbffc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  _speed: 5
+  _bulletCooldown: 0.2
+  _bulletTimer: 0
+  _bulletPool: {fileID: 634346100}
 --- !u!4 &1278665908
 Transform:
   m_ObjectHideFlags: 0
@@ -956,3 +1006,4 @@ SceneRoots:
   - {fileID: 1642120753}
   - {fileID: 1493617532}
   - {fileID: 1278665908}
+  - {fileID: 634346101}

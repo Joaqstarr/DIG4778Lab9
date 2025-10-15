@@ -11,7 +11,7 @@ public class TargetDestruction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             OnTargetDestroyed?.Invoke(Points);
             Destroy(gameObject);
         }
